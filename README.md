@@ -25,3 +25,33 @@ A modern blog application built with **Node.js, Express, and EJS**, featuring cl
 ---
 
 ## 📂 Project Structure
+```
+project/
+│
+├── public/            # Static files (CSS, images, JS)
+│   └── style.css
+│
+├── views/             # EJS templates
+│   ├── index.ejs
+│   ├── new.ejs
+│   ├── edit.ejs
+│   └── blog.ejs
+│
+├── routes/            # (optional but pro)
+│   └── posts.js
+│
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── README.md
+└── index.js           # Entry point
+```
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/your-username/quora-blog-app.git
+cd quora-blog-app
+npm install
+node index.js
