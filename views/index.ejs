@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navbar">
+    <div class="logo">📝 BlogApp</div>
+    <a href="/posts">Home</a>
+</div>
+<div class="container">
+    <a href="/posts/new" class="create-btn">+ Create Post</a>
+
+    <% for(user of posts) { %>
+        <div class="post">
+            <div class="userr">@<%= user.username %></div>
+            <div class="contents"><%= user.content %></div>
+
+            <div class="actions">
+                <a class="btn btn-view" href="/posts/<%= user.id %>">View</a>
+                <a class="btn btn-edit" href="/posts/<%= user.id %>/edit">Edit</a>
+                <form action="/posts/<%= user.id %>?_method=DELETE" method="POST">
+                     <button type="submit"> Delete </button>
+                </form>
+            </div>
+        </div>
+    <% } %>
+</div>
+    <!-- <br><br>
+    <a  href="http://localhost:8080/posts/new">Create a New post</a> -->
+
+</body>
+</html>
